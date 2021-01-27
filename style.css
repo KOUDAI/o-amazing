@@ -1,0 +1,563 @@
+@charset "utf-8";
+
+
+* {
+    margin: 0px;
+    padding:0px;
+}
+
+#container {
+    border-top: 5px solid #FFEB3B;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+h2 {
+    display: flex;
+    align-items: center; /* 垂直中心 */
+    justify-content: center; /* 水平中心 */
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+h2:before, h2:after {
+    border-top: 2px solid #060606;
+    content: "";
+    width: 3em; /* 線の長さ */
+}
+h2:before {
+    margin-right: 1em; /* 文字の右隣 */  
+}
+h2:after {
+    margin-left: 1em; /* 文字の左隣 */
+}
+
+h3 {
+    text-align: center;
+}
+
+.container{
+    width: 100% !important;
+    /* margin: 100px auto; */
+}
+/* NAVbar */
+/* -------------------------- */
+/*チェックボックス等は非表示に*/
+.navbar {
+background: repeating-linear-gradient(-45deg, #FFEB3B, #FFEB3B 3px,#FFEB3B 3px, #ffeb3b00 7px); 
+}
+.nav-unshown {
+display:none;
+}
+#nax-drawer {
+    display: flex;
+}
+#nav-content {
+    width: 400px;
+    height: 60px;
+}
+#nav-list.close {
+    display: block;
+    opacity: 0;
+    animation: hideAni .5s ease 0s 1 normal;
+}
+
+/* HOME */
+
+.home-content {
+    text-align: center;
+    /* margin-top: 20%; */
+}
+.container-video {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    opacity: 0.01;
+    animation: load 1.5s 0.8s ease-out forwards;
+}
+.container-video #video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+@keyframes load {
+    100% {
+        opacity: 1;
+    }
+}
+.table-center {
+    display: table;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.table-center > div {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+}
+.table-center > div h1 {
+    color: #fff;
+    text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px;
+    font-size: 100px;
+}
+.page-title {
+    text-transform: none;
+}
+/* 
+タイトルアニメーション
+ーーーーーーーーーーーーー */
+
+h1 {
+    display: inline-block;
+    width: 12ch;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 500;
+    border-right: 2px solid;
+    animation: typing 2s steps(30), caret 0.3s steps(1) infinite;
+    cursor: 1s steps(20) infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes cursor {
+    50% {
+        border-right-color: currentColor;
+    }
+}
+/* --------------------------------------- */
+
+.about {
+    margin: 100px auto;
+}
+.profile {
+    margin: 100px auto;
+}
+
+.works {
+    margin: 100px auto;
+}
+.container form {
+    margin: 50px auto;
+}
+div {
+    text-align: center;
+}
+.s-container {
+    display: flex;
+    justify-content: space-around;
+}
+/* About
+------------------------ */
+.a-contents {
+    margin: 50px auto;
+}
+.a-title {
+    /* display: inline-block;
+    border-left: 6px solid #FFEB3B;
+    border-right: 6px solid #FFEB3B;
+    padding: 0 40px; */
+    color: black;
+    text-align: center;
+    padding: 20px 10px 10px;
+    border-top: solid 2px #6cb4e4;
+    border-bottom: solid 2px #6cb4e4;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #FFEB3B, #FFEB3B 3px,#FFEB3B 3px, #ffeb3b00 7px);
+}
+.a-image {
+    width: 30%;
+    height: auto;
+}
+.a-image.henshu {
+    width: 50%;
+    height: auto;
+}
+.a-contents.span {
+font-weight: 600;
+    /* background-color: #6c757d78; */
+    font-size: 20px;
+}
+.a-contents.box {
+    margin: 0;
+}
+.balloon1 {
+    position: relative;
+    margin: 1.5em 0;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    border-radius: 15px;
+}
+
+.balloon1:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top: 15px solid #e0edff;
+}
+
+.balloon1 p {
+    margin: 0;
+    padding: 0;
+}
+/* 
+profile
+---------------------- */
+
+.pr-img1 {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 30px;
+}
+.p-work {
+    margin-top: 80px;
+    text-align: left;
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fas, .fab, .far {
+    margin-right: 0.5rem;
+    color: #ECD4AB;
+}
+.fa, .fas {
+    font-weight: 900;
+}
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+.fa-user:before {
+    content: "\f007";
+}
+.fa-link:before {
+    content: "\f0c1";
+}
+dl {
+    margin-top: 70px;
+}
+dd {
+    margin: 30px;
+}
+dd span {
+    margin-bottom: 0.25rem;
+    display: block;
+}
+a, a:visited, a:hover {
+    color: #ECD4AB;
+}
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+/* SNSボタン全体 */
+.flowbtn9{
+display:inline-block;	
+font-size:40px;
+text-decoration:none;
+transition:.5s;
+}
+/* Twitter */
+.flowbtn9 .fa-twitter-square{
+color:#55acee;
+}
+/* Instagram */
+.flowbtn9 .fa-instagram{
+color:#c6529a;
+}
+
+/* YouTube */
+.flowbtn9 .fa-youtube-square{
+color:#fc0d1c;
+}
+ul.snsbtniti {
+    list-style: none;
+    display: inline-flex;
+}
+
+/* WORKS
+ーーーーーーーーーーーーーーーーー */
+.w-video {
+    width: 100%;
+    height: auto;
+}
+.w-span {
+    margin-bottom: 50px;
+}
+.w-image {
+    width: 100%;
+    height: auto;
+    margin-top: -30px;
+}
+
+/* PRICE
+------------------------- */
+table{
+    width: 100%;
+    border-collapse:separate;
+    border-spacing: 0;
+    margin-bottom: 60px;
+}
+
+table th:first-child{
+    border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+    border-radius: 0 5px 0 0;
+    border-right: 1px solid #3c6690;
+}
+
+table th{
+    text-align: center;
+    color:black;
+    background: linear-gradient(#FFEB3B,#FFEB3B);
+    border-left: 1px solid #3c6690;
+    border-top: 1px solid #3c6690;
+    border-bottom: 1px solid #3c6690;
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    width: 25%;
+    padding: 10px 0;
+}
+
+table td{
+    text-align: center;
+    border-left: 1px solid #a8b7c5;
+    border-bottom: 1px solid #a8b7c5;
+    border-top:none;
+    box-shadow: 0px -3px 5px 1px #eee inset;
+    width: 25%;
+    padding: 10px 0;
+}
+
+table td:last-child{
+    border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+    border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+    border-radius: 0 0 5px 0; 
+}
+.p-h3 {
+    color: black;
+    text-align: center;
+    padding: 20px 10px 10px;
+    border-top: solid 2px #6cb4e4;
+    border-bottom: solid 2px #6cb4e4;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #FFEB3B, #FFEB3B 3px,#FFEB3B 3px, #ffeb3b00 7px);
+}
+/* CONTACT */
+/* ----------------------- */
+
+input{
+    margin:10px 0;
+    height:30px;
+    width:160px;
+}
+.form{
+    padding:10px;
+}
+.btn-info{
+    border:none;
+    color: white;
+    padding:10px 30px;
+    border-radius:10px;
+}
+.f-span {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 40%;
+}
+
+textarea {
+    width: 40%;
+}
+
+/* FOOTER 
+------------------------- */
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: repeating-linear-gradient(-45deg, #FFEB3B, #FFEB3B 3px,#FFEB3B 3px, #ffeb3b00 7px);
+}
+
+
+/* モバイル版
+---------------------- */
+
+@media (max-width: 800px) {
+    h2 {
+        font-size: medium;
+    }
+    .s-container {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 100%; */
+    }
+    .home-content {
+        margin-top: 50%;
+    }
+    .about {
+        margin: 50px auto;
+    }
+    .table-center > div h1
+    {
+    display: inline-block;
+    width: 12ch;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 50px;
+    border-right: 2px solid;
+    animation: typing 2s steps(30), caret 0.3s steps(3) infinite;
+    cursor: 1s steps(20) infinite;
+    }
+        div #nav-drawer {
+    position: relative;
+    text-align: right;
+    }
+
+    /* PROFILE
+    ------------------- */
+    .pr-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*チェックボックス等は非表示に*/
+    .nav-unshown {
+    display:none;
+    }
+
+    /*アイコンのスペース*/
+    #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+    }
+
+    /*ハンバーガーアイコンをCSSだけで表現*/
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 3px;/*線の太さ*/
+    width: 25px;/*長さ*/
+    border-radius: 3px;
+    background: #555;
+    display: block;
+    content: '';
+    cursor: pointer;
+    }
+    #nav-open span:before {
+    bottom: -8px;
+    }
+    #nav-open span:after {
+    bottom: -16px;
+    }
+
+    /*閉じる用の薄黒カバー*/
+    #nav-close {
+    display: none;/*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;/*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    }
+
+    /*中身*/
+    #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;/*最前面に*/
+    width: 85%;/*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 330px;/*最大幅（調整してください）*/
+    height: 100%;
+    font-size: 20px;
+    background: white;/*背景色*/
+    transition: .3s ease-in-out;/*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);/*左に隠しておく*/
+    padding: 60px;
+    }
+    /*チェックが入ったらもろもろ表示*/
+    #nav-input:checked ~ #nav-close {
+    display: block;/*カバーを表示*/
+    opacity: .5;
+    }
+    #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*中身を表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    }
+    .nav-item {
+        padding: 20px;
+    }
+    table  {
+        font-size: small;
+    }
+
+}
+/* -------------------------------- */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes cursor {
+    50% {
+        border-right-color: currentColor;
+    }
+}
+    input {
+        width: 80%;
+    }
+    textarea {
+        width: 80%;
+    }
+
+.wrap {
+    overflow: hidden;
+}
